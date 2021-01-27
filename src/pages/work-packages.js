@@ -78,9 +78,9 @@ export default function WorkPackages({ data }) {
       </Head>
 
       <section>
-      <h1 className="my-12 text-xl leading-9 font-extrabold text-center text-quarenary tracking-tight sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
-           Work Packages
-          </h1>
+        <h1 className="my-12 text-xl leading-9 font-extrabold text-center text-quarenary tracking-tight sm:text-2xl sm:leading-10 md:text-4xl md:leading-14">
+          Work Packages
+        </h1>
         <ul className="divide-y divide-gray-200">
           {workPackages.map((d) => (
             <WorkPackage
@@ -103,7 +103,9 @@ function Person({ name, avatar, twitter, email, leader }) {
     <div className="flex flex-row">
       <img
         alt={name}
-        className={`inline-block object-cover object-center ${leader ? "w-16 h-16" : "w-12 h-12"} mb-4 rounded-full bg-4gray-100`}
+        className={`inline-block object-cover object-center ${
+          leader ? 'w-16 h-16' : 'w-12 h-12'
+        } mb-4 rounded-full bg-4gray-100`}
         width="100%"
         height="100%"
         src={avatar}
@@ -111,33 +113,39 @@ function Person({ name, avatar, twitter, email, leader }) {
       <div className="m-2">
         <h4 className="font-bold tracking-tighter text-quartenary">{name}</h4>
         <div className="flex space-x-2">
-        {twitter && (
-          <a
-            href={`https://twitter.com/${twitter}`}
-            className="flex flex-row text-primary hover:text-secondary text-sm"
-          >
-            <svg
-              fill="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-5 h-5"
-              viewBox="0 0 24 24"
+          {email && (
+            <a
+              href={`mailto:${email}`}
+              className="flex flex-row text-primary hover:text-secondary text-sm"
             >
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-          </a>
-        )}
-        {email && (
-          <a
-            href={`mailto:${email}`}
-            className="flex flex-row text-primary hover:text-secondary text-sm"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="20" height="20" viewBox="0 0 24 24">
-              <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
-            </svg>
-          </a>
-        )}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+              </svg>
+            </a>
+          )}
+          {twitter && (
+            <a
+              href={`https://twitter.com/${twitter}`}
+              className="flex flex-row text-primary hover:text-secondary text-sm"
+            >
+              <svg
+                fill="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+              </svg>
+            </a>
+          )}
         </div>
       </div>
     </div>
@@ -151,8 +159,16 @@ function WorkPackage({ wpKey, title, text, leader, participants }) {
       className="container flex flex-col items-start py-4 mx-auto lg:pb-8 md:flex-row"
     >
       <div className="flex flex-col justify-center lg:max-w-sm lg:w-full  pl-4 md:pl-12 lg:pl-24">
-        <span className="mb-1 text-sm font-bold font-medium text-secondary title-font">WP Leader</span>
-        <Person leader name={leader.name} avatar={leader.avatar} twitter={leader.twitter} email={leader.email}/>
+        <span className="mb-1 text-sm font-bold font-medium text-secondary title-font">
+          WP Leader
+        </span>
+        <Person
+          leader
+          name={leader.name}
+          avatar={leader.avatar}
+          twitter={leader.twitter}
+          email={leader.email}
+        />
         {participants && (
           <span className="mt-4 mb-1 text-sm font-bold font-medium text-secondary title-font">
             Participants
@@ -167,9 +183,7 @@ function WorkPackage({ wpKey, title, text, leader, participants }) {
         <h3 className="mb-4 text-md font-medium tracking-widest text-secondary title-font">
           <strong>{wpKey}</strong> - {title}
         </h3>
-        <p className="prose">
-          {text}
-        </p>
+        <p className="prose">{text}</p>
       </div>
     </li>
   )

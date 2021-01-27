@@ -208,9 +208,9 @@ export const marit = {
 }
 
 export const alvaro = {
-  name: 'Alvaro Roman',
-  twitter: '',
-  email: 'aroman@uc.cl',
+  name: 'Álvaro Román',
+  twitter: '@alvaroroman',
+  email: 'alvaro.roman@ulagos.cl',
   position: 'Participant',
   avatar: alvaroAvatar,
 }
