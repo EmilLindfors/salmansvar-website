@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": false,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider; next dev",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build && next export",
     "start": "next start",
     "build:rss": "node ./.next/server/scripts/build-rss.js"
   },
@@ -15,6 +15,7 @@
     "@tailwindcss/typography": "^0.1.2",
     "@tailwindcss/ui": "^0.3.0",
     "autoprefixer": "^9.8.4",
+    "cross-env": "^7.0.3",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-dom": "16.13.1",
