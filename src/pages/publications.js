@@ -30,8 +30,8 @@ export default function Publications() {
       <Head>
         <title>Publications – Salmansvar </title>
       </Head>
-      <div className="flex flex-col place-content-center">
-        <div class="mt-12 prose lg:prose-md">
+      <div className="flex justify-center">
+        <div class="mt-12 prose lg:prose-xl">
           <h1 className="my-6 font-semibold tracking-tighter title-font text-quartenary">
             Publications from Salmansvar
           </h1>
