@@ -1,3 +1,4 @@
+import Button from '@/components/button';
 import Head from 'next/head'
 
 const citations = [
@@ -24,14 +25,26 @@ const articles = [
 "Aarstad, J., Fløysand, A., Jakobsen, S-E. (2023) «Havbruksnæringen er opptatt av bærekraft og samfunnsansvar», Kyst.no, 14.03.2023 https://www.kyst.no/forsking-kommentar-leserinnlegg/havbruksnaeringen-er-opptatt-av-baerekraft-og-samfunnsansvar/1499504"
 ]
 
+
 export default function Publications() {
   return (
     <div>
       <Head>
-        <title>Publications – Salmansvar </title>
+        <title>Results from Salmansvar </title>
       </Head>
-      <div className="flex justify-center">
-        <div class="mt-12 prose lg:prose-xl">
+      <div className="flex flex-col justify-center">
+      <div class="mt-12 prose lg:prose-xl">
+          <h1 className="my-6 font-semibold tracking-tighter title-font text-quartenary">
+           Living Lab reports
+          </h1>
+<div className='p-4'>
+         <a href='ll_cl.pdf' download>Download Report from Chilean Living Lab</a>
+         </div>
+         <div className='p-4'>
+         <a href='ll_no.pdf' download>Download report from Norwegian living lab</a>
+         </div>
+        </div>
+        <div className="mt-12 prose lg:prose-xl">
           <h1 className="my-6 font-semibold tracking-tighter title-font text-quartenary">
             Publications from Salmansvar
           </h1>
@@ -41,7 +54,7 @@ export default function Publications() {
             ))}
           </ol>
         </div>
-        <div class="mt-6 prose lg:prose-md">
+        <div className="mt-6 prose lg:prose-md">
           <h1 className="my-6 font-semibold tracking-tighter title-font text-quartenary">
             Featured Articles
           </h1>
